@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout_overview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <TextView
+        android:id="@+id/naslov_pregledTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/broj_u_cekTv"
+        app:autoSizeTextType="uniform"
+        android:text="@string/naslov_pregled_stanja"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_marginTop = "30dp"
+        android:layout_marginBottom="110dp"
+        android:scrollHorizontally="false"
+        />
+
+    <TextView
+        android:id="@+id/broj_u_cekLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/naslov_pregledTv"
+        android:text="@string/broj_u_cekaonici"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop = "65dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/broj_u_cekTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/naslov_pregledTv"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_marginTop = "65dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="300dp"
+        />
+
+    <TextView
+        android:id="@+id/broj_hosptLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/broj_u_cekLbl"
+        android:text="@string/broj_hospitalizovanih"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop = "37dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/broj_hosptTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/broj_u_cekTv"
+        android:text=""
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop = "37dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="300dp"
+        />
+
+    <TextView
+        android:id="@+id/broj_otpustLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/broj_hosptLbl"
+        app:autoSizeTextType="uniform"
+        android:text="@string/broj_otpustenih"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop = "37dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/broj_otpustTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/broj_hosptTv"
+        app:autoSizeTextType="uniform"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop = "37dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="300dp"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

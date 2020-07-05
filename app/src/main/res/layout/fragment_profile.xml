@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+    <TextView
+        android:id="@+id/naslov_profilTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/profil_logoIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:autoSizeTextType="uniform"
+        android:text="@string/naslov_profil"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_marginTop="30dp"
+        android:layout_margin="10dp"
+        />
+c
+    <ImageView
+        android:id="@+id/profil_logoIv"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_health_care_worker"
+        app:layout_constraintTop_toBottomOf="@id/naslov_profilTv"
+        app:layout_constraintBottom_toTopOf="@id/worker_nameTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/worker_nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profil_logoIv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/profil_nameTv"
+        android:text="@string/profil_ime"
+        android:layout_marginStart="60dp"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/profil_nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/worker_nameTv"
+        app:layout_constraintBottom_toTopOf="@id/worker_lastnameTv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="80dp"
+        android:text=""
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/worker_lastnameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profil_nameTv"
+        app:layout_constraintBottom_toTopOf="@id/profil_lastnameTv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/profil_prezime"
+        android:layout_marginStart="60dp"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/profil_lastnameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/worker_lastnameTv"
+        app:layout_constraintBottom_toTopOf="@id/worker_hospitalTv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="80dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20dp"
+        android:text=" "
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/worker_hospitalTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profil_lastnameTv"
+        app:layout_constraintBottom_toTopOf="@id/profil_hospitalTv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/profil_bolnica"
+        android:layout_marginStart="60dp"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/profil_hospitalTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/worker_hospitalTv"
+        app:layout_constraintBottom_toTopOf="@id/izmeniBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="80dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20dp"
+        android:text=" "
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/izmeniBtn"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profil_hospitalTv"
+        app:layout_constraintEnd_toStartOf="@id/odjavaBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/btn_izmeni"
+        android:color="@android:color/black"
+        android:background="@android:color/darker_gray"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/odjavaBtn"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/izmeniBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profil_hospitalTv"
+        android:layout_marginRight="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/btn_profil_odjava"
+        android:color="@android:color/black"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

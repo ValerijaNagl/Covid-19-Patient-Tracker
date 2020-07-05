@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_change"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/naslov_profilTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/profil_logoIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:autoSizeTextType="uniform"
+            android:text="@string/naslov_profil"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginTop = "30dp"
+            android:layout_marginBottom="10dp"
+            android:scrollHorizontally="false"
+            />
+
+        <ImageView
+            android:id="@+id/profil_logoIv"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/ic_health_care_worker"
+            app:layout_constraintTop_toBottomOf="@id/naslov_profilTv"
+            app:layout_constraintBottom_toTopOf="@id/change_nameEt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/change_nameEt"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/profil_logoIv"
+            app:layout_constraintBottom_toTopOf="@id/change_lastnameEt"
+            android:background="@drawable/box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="40dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/change_lastnameEt"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/change_nameEt"
+            app:layout_constraintBottom_toTopOf="@id/change_hospitalEt"
+            android:background="@drawable/box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin = "20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/change_hospitalEt"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/change_lastnameEt"
+            android:background="@drawable/box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="20dp"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/change_greskaTv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/change_hospitalEt"
+            app:layout_constraintBottom_toTopOf="@id/odustaniBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/odustaniBtn"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/change_greskaTv"
+            app:layout_constraintEnd_toStartOf="@id/izmeni_infoBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/btn_odustani"
+            android:color="@android:color/black"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <Button
+            android:id="@+id/izmeni_infoBtn"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/odustaniBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/change_greskaTv"
+            android:layout_marginRight="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/btn_izmeni"
+            android:color="@android:color/black"
+            android:background="@android:color/darker_gray"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/box"
+    android:layout_margin="10dp"
+  >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/patientPicIv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/patientPicIv"
+        app:layout_constraintBottom_toTopOf="@id/lastnameTv"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lastnameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nameTv"
+        app:layout_constraintBottom_toBottomOf="@id/patientPicIv"
+        app:layout_constraintStart_toEndOf="@id/patientPicIv"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/simptomsTi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patientPicIv"
+        android:layout_marginBottom="50dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="13dp"
+         />
+
+    <Button
+        android:id="@+id/zdravBtn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/simptomsTi"
+        app:layout_constraintEnd_toStartOf="@id/hospitalizacijaBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/btn_zdrav"
+        android:layout_marginRight="30dp"
+        android:color="@android:color/black"
+        android:background="@android:color/darker_gray"
+        android:layout_marginLeft="40dp"
+
+        />
+
+    <Button
+        android:id="@+id/hospitalizacijaBtn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/simptomsTi"
+        app:layout_constraintStart_toEndOf="@id/zdravBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/btn_hospitalizacija"
+        android:color="@android:color/black"
+        android:layout_marginRight="40dp"
+        android:background="@android:color/darker_gray"
+
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
